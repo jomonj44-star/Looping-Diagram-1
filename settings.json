@@ -1,0 +1,99 @@
+{
+  "scale": 200,
+  "paper_factor": 1.0,
+  "length_multiplier": 1.0,
+  "extra_per_span_m": 0.0,
+  "long_span_warn_m": 45.0,
+  "page": 0,
+  "annot_subtype": "FreeText",
+  "leader_color": [
+    0.0,
+    0.5,
+    0.5
+  ],
+  "match_tol": 12.0,
+  "text_gap": 4.0,
+  "old_tag_regex": "^\\d\\dB[NL]L\\d\\d/",
+  "tag_regex": "^(?P<panel>\\w+)/(?P<cct>\\d+)L(?P<ph>\\d)-(?P<no>\\d+)(?:/(?P<cct2>\\d+)L(?P<ph2>\\d)-(?P<no2>\\d+))?$",
+  "phase_order": [
+    "1",
+    "2",
+    "3"
+  ],
+  "jb_suffix": "-JB",
+  "jb_label": "JB: ",
+  "cable_tag": "{panel}/{cct}-C{n:02d}",
+  "cable_sizes": {
+    "default": "5C x 16 sq.mm"
+  },
+  "fixture_types": [
+    {
+      "name": "LD17",
+      "match": "LD17-",
+      "symbol": "LD17"
+    },
+    {
+      "name": "LD17.1",
+      "match": "LD17.1-",
+      "symbol": "LD17.1"
+    },
+    {
+      "name": "LD16.1",
+      "match": "LD16.1-",
+      "symbol": "LD16.1"
+    },
+    {
+      "name": "LD16.2",
+      "match": "LD16.2-",
+      "symbol": "LD16.2"
+    }
+  ],
+  "pick": {
+    "radius": 12.0,
+    "max_size": 9.0,
+    "jb_color": [
+      0.5,
+      0.0,
+      0.5
+    ],
+    "ignore_colors": [
+      [
+        0.0,
+        0.5,
+        0.0
+      ],
+      [
+        0.5
+      ],
+      [
+        0.0,
+        0.5,
+        0.5
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "out": {
+    "bw_symbols": true,
+    "per_row": 5,
+    "dx": 96,
+    "dy": 84,
+    "symbol_scale": 3.6,
+    "page_w_in": 16.54,
+    "page_h_in": 11.69,
+    "tag_fill": "#a8ff40",
+    "tag_edge": "#e00000",
+    "tag_text": "#001a66",
+    "line_color": "#007000",
+    "length_color": "#006000",
+    "show_old_tag": true,
+    "show_jb_tag": true,
+    "show_cable_tag": true,
+    "title": "LOOPING DIAGRAM",
+    "source_note": ""
+  }
+}
