@@ -1,0 +1,18 @@
+name: Build Windows EXE
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - run: pip install -r requirements.txt pyinstaller
+      - run: pyinstaller --noconfirm --onefile --windowed --name LoopDiagramBuilder --collect-all pdfplumber --collect-all pdfminer --collect-all pypdfium2 --add-data "symbols;symbols" --add-data "settings.json;." app.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LoopDiagramBuilder-exe
+          path: dist/LoopDiagramBuilder.exe
